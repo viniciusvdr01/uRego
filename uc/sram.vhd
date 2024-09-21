@@ -31,7 +31,7 @@ signal mem_array : sram_t := (others => (others =>'1'));
 
 begin
 
-io_data <= (others => 'Z') when (i_en = '1') or (i_we and i_oe) = '1' 
+io_data <= (others => 'Z') when i_en = '1' or i_we ='0' or i_oe = '1' 
 	   else std_logic_vector(mem_array(to_integer(i_address)));
 
 write:process(i_we,i_en)
