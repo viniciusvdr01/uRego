@@ -31,14 +31,14 @@ signal mem_array : sram_t := (others => (others =>'1'));
 
 begin
 
-	io_data <= (others => 'Z') when (i_en = '1') or (i_we and i_oe) = '1' 
-	           else std_logic_vector(mem_array(to_integer(i_address)));
+io_data <= (others => 'Z') when (i_en = '1') or (i_we and i_oe) = '1' 
+	   else std_logic_vector(mem_array(to_integer(i_address)));
 
-      write:process(i_we,i_en)
-	begin
-		if falling_edge(i_we) and i_en = '0' then
-			mem_array(to_integer(i_address)) <= unsigned(io_data);
-		end if;
-	end process write;
-	
+write:process(i_we,i_en)
+begin
+	if falling_edge(i_we) and i_en = '0' then
+		mem_array(to_integer(i_address)) <= unsigned(io_data);
+	end if;
+end process write;
+
 end behavioral;
