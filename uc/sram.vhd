@@ -29,18 +29,16 @@ type sram_t is array(0 to 255) of unsigned(7 downto 0);
 -- Initialize memory array with 0xFF in all positions.
 signal mem_array : sram_t := (others => (others =>'1'));
 
-
 begin
 
 	io_data <= (others => 'Z') when (i_en = '1') or (i_we and i_oe) = '1' 
 	           else std_logic_vector(mem_array(to_integer(i_address)));
 
-
-	process(i_we,i_oe,i_en)
+      write:process(i_we,i_en)
 	begin
 		if falling_edge(i_we) and i_en = '0' then
 			mem_array(to_integer(i_address)) <= unsigned(io_data);
 		end if;
-	end process;
+	end process write;
 	
 end behavioral;
