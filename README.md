@@ -1,7 +1,7 @@
 # uRego
 8-bit Von Neumann Microcontroller made with VHDL
 
-##uRego Architecture
+## uRego Architecture
 
  ![uRegoArch](./assets/arch.png)
 
