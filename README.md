@@ -3,6 +3,6 @@
 
 ##uRego Architecture
 
- ![uRegoArch](./assets/ctrlFSM.png)
+ ![uRegoArch](./assets/arch.png)
 
 ## uRego Instruction Set
