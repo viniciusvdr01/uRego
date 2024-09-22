@@ -24,17 +24,17 @@ int main(int argc, char **argv)
 switch (argc)
 {
 	case 1 : 
-		printf("RAC :  Fatal error  :  No input files... See --help.\n");
+		printf("VRASM :  Fatal error  :  No input files... See --help.\n");
 		break;
 	case 2 : 
 		if(!strcmp(argv[1],"--info")) print_info();
 		else if(!strcmp(argv[1],"--help")) print_help();
-		else printf("RAC  :  Fatal error  :  Illegal arguments , see --help.\n");
+		else printf("VRASM  :  Fatal error  :  Illegal arguments , see --help.\n");
 		break;
 	case 5 :
-		if(strcmp(argv[1],"-i")) printf("RAC : Fatal error : Illegal arguments, see --help.\n");
-		else if( strcmp(argv[3],"-o")) printf("RAC : Fatal error : Illegal arguments, see --help.\n");
-		else if(!get_extensions(argv[2],argv[4],&io_exts) ) printf("RAC  :  Error reading argument files.\n");
+		if(strcmp(argv[1],"-i")) printf("VRASM : Fatal error : Illegal arguments, see --help.\n");
+		else if( strcmp(argv[3],"-o")) printf("VRASM : Fatal error : Illegal arguments, see --help.\n");
+		else if(!get_extensions(argv[2],argv[4],&io_exts) ) printf("VRASM  :  Error reading argument files.\n");
 		else{
 			printf("Starting compilation...\n");
 		}
@@ -42,7 +42,7 @@ switch (argc)
 		free(io_exts.in_ext);
 		break;
 	default: 
-		printf("RAC  :  Fatal error  : Illegal arguments, see --help.\n");
+		printf("VRASM  :  Fatal error  : Illegal arguments, see --help.\n");
 }
 
 	
@@ -53,7 +53,7 @@ return 0;
 
 void print_info(void)
 {
-	printf("RAC - Rego Asm Compiler compiles .asm files for uRego 8-bit fpga-microcontroller into .bin , .coe, .mcs  or .hex files used as fpga's block ram memory initialiazion files from multiple manufactures.\n");
+	printf("vrasm - is an assembler that compiles .asm files for uRego 8-bit fpga-microcontroller into .bin , .coe, .mcs  or .hex files used as fpga's block ram memory initialiazion files from multiple manufactures.\n");
 
 
 }
@@ -124,7 +124,7 @@ int sort_extension(char** ext_vector,char* extension,char* file_name,int extensi
 		}
 		else if(i == strlen(file_name))
 		{
-			printf("RAC  :  Error : Missing . separation between name and extension\n");	
+			printf("VRASM  :  Error : Missing . separation between name and extension\n");	
 			return 0;
 		}
 	}
@@ -139,7 +139,7 @@ int sort_extension(char** ext_vector,char* extension,char* file_name,int extensi
 		}
 		else if (i == extensions_number-1) 
 		{
-			printf("RAC  :  Error : Invalid file extension format\n");
+			printf("VRASM  :  Error : Invalid file extension format\n");
 			return 0;
 
 		}
