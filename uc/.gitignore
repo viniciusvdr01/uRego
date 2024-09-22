@@ -1,5 +1,4 @@
-*
+/*
 
-!sram.vhd
 !.gitignore
-!sram_tb.vhd
+!ipcore_dir/
