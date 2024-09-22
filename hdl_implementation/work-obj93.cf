@@ -1,0 +1,10 @@
+v 4
+file . "sram.vhd" "2a652f1b32643daaf31779d566de3a3c1e323b45" "20240922014824.553":
+  entity sram at 1( 0) + 0 on 63;
+  architecture behavioral of sram at 25( 728) + 0 on 64;
+file . "eeprom.vhd" "9c20fb62a2ee63d6cdc4bcc844a337458df1e555" "20240921163526.054":
+  entity eeprom at 1( 0) + 0 on 11;
+  architecture behavioral of eeprom at 16( 332) + 0 on 12;
+file . "sram_tb.vhd" "61a7e8975d2c4e9f4485c104d00a880db3cec6b2" "20240922014824.654":
+  entity sram_tb at 1( 0) + 0 on 65;
+  architecture behavioral of sram_tb at 9( 103) + 0 on 66;
