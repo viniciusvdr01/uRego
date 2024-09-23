@@ -4,7 +4,12 @@ use ieee.numeric_std.all;
 
 
 entity uRego is 
-
+port(
+	oport   : out unsigned(7 downto 0);
+	iport   : in  unsigned(7 downto 0);
+	intport : in  unsigned(7 downto 0)
+);
+	
 end uRego;
 
 architecture behavioral of uRego is 
